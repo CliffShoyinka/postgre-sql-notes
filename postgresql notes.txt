@@ -1,0 +1,39 @@
+--- POSTGRE SQL NOTES ---
+
+DROP TABLE IF EXISTS Employee;
+DROP TABLE IF EXISTS Departmant;
+DROP TABLE IF EXISTS Company;
+
+	NOTICE:  table "employee" does not exist, skipping
+	NOTICE:  table "departmant" does not exist, skipping
+	NOTICE:  table "company" does not exist, skipping
+	DROP TABLE
+
+	Query returned successfully in 47 msec.
+	
+CREATE TABLE department (
+
+	id INT PRIMARY KEY,
+	name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE company (
+
+	id INT PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	revenue INT
+);
+
+	CREATE TABLE
+
+	Query returned successfully in 53 msec.
+	
+CREATE TABLE employee(
+
+	id INT PRIMARY KEY,
+	name VARCHAR(150) NOT NULL,
+	city VARCHAR(150) NOT NULL,
+	departmany_id INT NOT NULL,
+	salary INT NOT NULL,
+	FOREIGN KEY (departmant_id) REFERENCES departmant(id)
+);
