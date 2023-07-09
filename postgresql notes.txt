@@ -69,3 +69,6 @@ VALUES
 	Query returned successfully in 96 msec.
 	
 SELECT * FROM company;
+
+
+day 4
